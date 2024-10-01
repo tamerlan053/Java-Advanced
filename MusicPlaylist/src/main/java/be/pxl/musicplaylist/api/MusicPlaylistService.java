@@ -17,12 +17,6 @@ public class MusicPlaylistService {
     }
 
     public List<Song> getAllSongsByGenre(Genre genre) {
-        List<Song> songsByGenre = new ArrayList<>();
-        for (Song song: myPlaylist) {
-            if (song.getGenre() == genre) {
-                songsByGenre.add(song);
-            }
-        }
-        return songsByGenre;
+        return myPlaylist.stream().filter(s -> s.getGenre() == genre).toList();
     }
 }
