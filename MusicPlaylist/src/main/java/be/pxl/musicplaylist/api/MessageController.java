@@ -12,5 +12,9 @@ import java.security.NoSuchAlgorithmException;
 @RestController
 @RequestMapping("/hash")
 public class MessageController {
-  
+    private final MessageDigestService messageDigestService;
+
+    public MessageController(MessageDigestService messageDigestService) {
+        this.messageDigestService = messageDigestService;
+    }
 }
