@@ -17,4 +17,9 @@ public class MessageController {
     public MessageController(MessageDigestService messageDigestService) {
         this.messageDigestService = messageDigestService;
     }
+
+    @PostMapping
+    public ResponseEntity<String> calculateHash(@RequestBody CalculateHashRequest request) {
+        
+    }
 }
