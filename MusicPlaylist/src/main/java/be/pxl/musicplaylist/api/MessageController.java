@@ -20,6 +20,11 @@ public class MessageController {
 
     @PostMapping
     public ResponseEntity<String> calculateHash(@RequestBody CalculateHashRequest request) {
-        
+        try {
+            String hash = messageDigestService.calculateHash(request.getAlgorithm(), request.getText());
+            return ResponseEntity.ok(hash);
+        } catch (NoSuchAlgorithmException e) {
+            return ResponseEntity.badRequest().body("Invalid algorithm: " + request.getAlgorithm());
+        }
     }
 }
