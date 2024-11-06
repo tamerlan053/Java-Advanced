@@ -22,4 +22,16 @@ public class MusicPlaylistController {
         }
         musicPlaylistService.addSong(song);
     }
+
+    @GetMapping
+    public List<Song> getAllSongs() {
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Fetching all songs from the playlist");
+        }
+        List<Song> songs = musicPlaylistService.getAllSongs();
+        if (LOGGER.isInfoEnabled()) {
+            LOGGER.info("Retrieved " + songs.size() + " songs from the playlist");
+        }
+        return songs;
+    }
 }
