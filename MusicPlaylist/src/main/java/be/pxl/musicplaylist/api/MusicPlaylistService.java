@@ -12,4 +12,8 @@ public class MusicPlaylistService {
     public void addSong(Song song) {
         myPlaylist.add(song);
     }
+
+    public List<Song> getSongs() {
+        return myPlaylist;
+    }
 }
