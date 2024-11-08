@@ -16,4 +16,15 @@ public class MusicPlaylistService {
     public List<Song> getSongs() {
         return myPlaylist;
     }
+
+    
+    public List<Song> getSongsByGenre(Genre genre) {
+        List<Song> response = new ArrayList<>();
+        for (Song song : myPlaylist) {
+            if (song.getGenre() == genre) {
+                response.add(song);
+            }
+        }
+        return response;
+    }
 }
