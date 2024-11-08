@@ -29,4 +29,9 @@ public class MusicPlaylistController {
     public List<Song> getSongs() {
         return musicPlaylistService.getSongs();
     }
+
+        @GetMapping("{genre}")
+    public List<Song> getSongs(@PathVariable Genre genre) {
+        return musicPlaylistService.getSongsByGenre(genre);
+    }
 }
