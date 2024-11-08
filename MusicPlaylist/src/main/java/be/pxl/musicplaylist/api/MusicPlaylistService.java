@@ -27,4 +27,8 @@ public class MusicPlaylistService {
         }
         return response;
     }
+
+    public void updateSong(int index, Song song) {
+        myPlaylist.set(index, song);
+    }
 }
