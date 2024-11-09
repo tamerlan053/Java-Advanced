@@ -17,7 +17,6 @@ public class MusicPlaylistService {
         return myPlaylist;
     }
 
-    
     public List<Song> getSongsByGenre(Genre genre) {
         List<Song> response = new ArrayList<>();
         for (Song song : myPlaylist) {
@@ -28,7 +27,11 @@ public class MusicPlaylistService {
         return response;
     }
 
-    public void updateSong(int index, Song song) {
+    public void upadteSong(int index, Song song) {
         myPlaylist.set(index, song);
+    }
+
+    public void deleteSong(int index) {
+        myPlaylist.remove(index);
     }
 }
