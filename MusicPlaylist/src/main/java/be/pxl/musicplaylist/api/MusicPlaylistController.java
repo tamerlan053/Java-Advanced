@@ -30,13 +30,18 @@ public class MusicPlaylistController {
         return musicPlaylistService.getSongs();
     }
 
-        @GetMapping("{genre}")
+    @GetMapping("{genre}")
     public List<Song> getSongs(@PathVariable Genre genre) {
         return musicPlaylistService.getSongsByGenre(genre);
     }
 
-        @PutMapping("/{index}")
+    @PutMapping("/{index}")
     public void updateSong(@PathVariable int index, @RequestBody Song song) {
         musicPlaylistService.upadteSong(index, song);
+    }
+
+    @DeleteMapping("/{index}")
+    public void deleteSong(@PathVariable int index) {
+        musicPlaylistService.deleteSong(index);
     }
 }
