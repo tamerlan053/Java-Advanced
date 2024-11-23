@@ -18,4 +18,9 @@ public class Superhero {
     public Superhero() {
 
     }
+    public Superhero(String firstName, String lastName, String superheroName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.superheroName = superheroName;
+    }
 }
