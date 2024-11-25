@@ -1,4 +1,6 @@
 package com.superhero.api.request;
 
-public class CreateSuperheroRequest {
+import jakarta.validation.constraints.NotBlank;
+
+public record CreateSuperheroRequest(@NotBlank String firstName, @NotBlank String lastName, @NotBlank String superheroName) {
 }
