@@ -10,4 +10,8 @@ public class SuperheroService {
     public SuperheroService(SuperheroRepository superheroRepository) {
         this.superheroRepository = superheroRepository;
     }
+
+    public void createSuperhero(CreateSuperheroRequest superheroRequest) {
+
+    }
 }
