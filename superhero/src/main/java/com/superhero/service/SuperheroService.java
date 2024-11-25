@@ -1,5 +1,6 @@
 package com.superhero.service;
 
+import com.superhero.repository.SuperheroRepository;
 import org.springframework.stereotype.Service;
 
 @Service
